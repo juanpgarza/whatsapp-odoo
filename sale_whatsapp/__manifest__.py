@@ -5,7 +5,7 @@
     "name": "Sale whatsapp integrations",
     "summary": "Integrate whatsapp with Sale App",
     "version": "15.0.1.0.0",
-    "category": "Customer Relationship Management",
+    "category": "Social",
     "website": "https://github.com/juanpgarza/whatsapp-odoo",
     "author": "juanpgarza",
     "license": "AGPL-3",
