@@ -1,5 +1,3 @@
-# Copyright 2021 openNova - Juan Pablo Garza <juanp@opennova.com.ar>
-# License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 import logging
 import urllib
 import re
@@ -23,7 +21,7 @@ class SendWhatsappPartner(models.TransientModel):
             return default_message_id[0]
         else:
             False
-    
+
     default_messege_id = fields.Many2one('on.whatsapp.template', domain="[('category', '=', 'partner')]", default=_default_default_message_id)
 
     name = fields.Char(related='partner_id.name')
@@ -49,7 +47,7 @@ class SendWhatsappPartner(models.TransientModel):
         incluid_name = ''
         if not self.jitsi_link:
             self.jitsi_link = self.env['jitsi.meet'].sudo().create({'name':'Jitsi Meet'}).jitsi_link
-        
+
         try:
             incluid_name = str(message).format(
                 name=partner_record.name,

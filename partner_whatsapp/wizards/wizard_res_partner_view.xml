@@ -1,6 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright 2021 openNova - Juan Pablo Garza <juanp@opennova.com.ar>
-     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html). -->
 <odoo>
    <record id="send_whatsapp_view_partner_form" model="ir.ui.view">
         <field name="name">whatsapp.form</field>
@@ -27,7 +25,7 @@
                             </div>
                         </div>
                         <div class="col-8 o_setting_box">
-                            <div style="float: right;width: auto;">                                
+                            <div style="float: right;width: auto;">
                                 <button type="object" name="sending_confirmed" class="btn btn-secondary" string="Confirmar envío"/>
                                 <button type="object" name="sending_error" class="btn btn-secondary" string="Error en el envío"/>
                             </div>

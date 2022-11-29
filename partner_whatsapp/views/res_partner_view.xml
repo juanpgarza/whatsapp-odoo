@@ -1,6 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright 2021 openNova - Juan Pablo Garza <juanp@opennova.com.ar>
-     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html). -->
 <odoo>
     <record id="view_partner_form_extend" model="ir.ui.view">
             <field name="name">res.partner.form.extend</field>

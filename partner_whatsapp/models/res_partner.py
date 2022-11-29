@@ -1,6 +1,3 @@
-# Copyright 2021 openNova - Juan Pablo Garza <juanp@opennova.com.ar>
-# License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
-
 import logging
 import urllib
 import html2text
@@ -50,8 +47,8 @@ class ResPartner(models.Model):
             'force_email': False,
             }
 
-        subtype_id = self.env['ir.model.data'].xmlid_to_res_id('mail_mt_note')
-        self.with_context(ctx).message_post(attachment_ids=[], body=message, canned_response_ids=[], channel_ids=[],
+        subtype_id = self.env['ir.model.data']._xmlid_to_res_id('mail_mt_note')
+        self.with_context(ctx).message_post(attachment_ids=[], body=message, canned_response_ids=[],
                                             message_type='notification', partner_ids=[], subtype_xmlid=None,
                                             subtype_id=subtype_id)
 
