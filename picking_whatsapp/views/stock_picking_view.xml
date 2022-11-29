@@ -1,6 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright 2021 openNova - Juan Pablo Garza <juanp@opennova.com.ar>
-     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html). -->
 <odoo>
     <record id="view_picking_form_extend" model="ir.ui.view">
             <field name="name">stock.picking.form.extend</field>
@@ -22,25 +20,25 @@
 
                 <xpath expr="//header" position="inside">
                     <field name="send_whatsapp" invisible="1"/>
-                    <button name="send_whatsapp_step" 
-                            groups="base_whatsapp.group_on_whatsapp_user" 
-                            class="btn btn-primary" 
+                    <button name="send_whatsapp_step"
+                            groups="base_whatsapp.group_on_whatsapp_user"
+                            class="btn btn-primary"
                             string="Enviar Whatsapp"
-                            attrs="{'invisible': ['|', '|', ('is_locked', '=', False), ('send_whatsapp', '!=', 'without_sending')]}"
+                            attrs="{'invisible': [('send_whatsapp', '!=', 'without_sending')]}"
                             type="object"/>
-                    <button name="send_whatsapp_step" 
-                            groups="base_whatsapp.group_on_whatsapp_user" 
-                            class="btn btn-success" 
-                            string="Whatapp enviado" 
+                    <button name="send_whatsapp_step"
+                            groups="base_whatsapp.group_on_whatsapp_user"
+                            class="btn btn-success"
+                            string="Whatapp enviado"
                             icon="fa-whatsapp"
-                            attrs="{'invisible': ['|', '|', ('is_locked', '=', False), ('send_whatsapp', '!=', 'sent')]}"
+                            attrs="{'invisible': [('send_whatsapp', '!=', 'sent')]}"
                             type="object"/>
-                    <button name="send_whatsapp_step" 
-                            groups="base_whatsapp.group_on_whatsapp_user"  
-                            class="btn" 
-                            string="Whatsapp no enviado" 
+                    <button name="send_whatsapp_step"
+                            groups="base_whatsapp.group_on_whatsapp_user"
+                            class="btn"
+                            string="Whatsapp no enviado"
                             icon="fa-whatsapp"
-                            attrs="{'invisible': ['|', '|', ('is_locked', '=', False), ('send_whatsapp', '!=', 'not_sent')]}"
+                            attrs="{'invisible': [('send_whatsapp', '!=', 'not_sent')]}"
                             type="object"/>
                 </xpath>
 
