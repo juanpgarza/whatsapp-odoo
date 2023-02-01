@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <record model="on.whatsapp.template" id="task_whatsapp.data_whatsapp_task_template_0">
+        <field name="name">Ejemplo Tareas</field>
+        <field name="template_message">
+            Esta es una plantilla de ejemplo de la categoría: Tareas
+            Los campos que se pueden utilizar dentro de esta categoría son:
+                *Nombre:* {name}
+                *Empresa:* {company}
+                *Sitio Web:* {website}
+        </field>
+        <field name="category">task</field>
+        <field name="active">0</field>
+    </record>
+</odoo>
