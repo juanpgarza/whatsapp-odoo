@@ -61,10 +61,17 @@ class SendWhatsappTask(models.TransientModel):
 
         # delivery_address = "{} - {}".format(warehouse_partner_id.street,warehouse_partner_id.city)
 
+        IrParamSudo = self.env['ir.config_parameter'].sudo()
+        web_base_url = IrParamSudo.get_param('web.base.url')
+        access_token = task_record.rating_get_access_token()
+
         incluid_name = str(message).format(
             name=partner_record.name,
             company=task_record.project_id.company_id.name,
             website=task_record.project_id.company_id.website,
+            # rate
+            # 1=Malo, 3=Bueno, 5=Muy Bueno
+            rate_url = "{}/rate/{}".format(web_base_url,access_token) 
             # invoice=', '.join(picking_record.sale_id.invoice_ids.filtered(lambda x: x.move_type == 'out_invoice').mapped('display_name')),
             # sale_order=picking_record.sale_id.name,
             # voucher_ids=', '.join(picking_record.voucher_ids.mapped('name')),

@@ -8,6 +8,7 @@
                 *Nombre:* {name}
                 *Empresa:* {company}
                 *Sitio Web:* {website}
+                *Enlace para calificación de cliente (/1=Malo, /3=Bueno, /5=Muy Bueno):* {rate_url}
         </field>
         <field name="category">task</field>
         <field name="active">0</field>
