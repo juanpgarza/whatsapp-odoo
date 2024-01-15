@@ -45,6 +45,7 @@ class SendWhatsappInvoice(models.TransientModel):
                 website=invoice_id.company_id.website,
                 document_name=invoice_id.name,
                 link_preview=url_preview,
+                origin=invoice_id.invoice_origin,
                 )
 
         except Exception:
