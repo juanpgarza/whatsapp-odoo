@@ -44,7 +44,11 @@ class SendWhatsappPicking(models.TransientModel):
         defaults = super(
             SendWhatsappPicking, self).default_get(field_names)
         # self.partner_id = self.env['stock.picking'].browse(self.env.context['active_id']).partner_id
-        defaults['partner_id'] = self.env['stock.picking'].browse(self.env.context['active_id']).partner_id.id
+        partner_id = self.env['stock.picking'].browse(self.env.context['active_id']).partner_id
+        if partner_id.parent_id:
+            defaults['partner_id'] = partner_id.parent_id.id
+        else:    
+            defaults['partner_id'] = partner_id.id
         # import pdb; pdb.set_trace()
         return defaults
 
