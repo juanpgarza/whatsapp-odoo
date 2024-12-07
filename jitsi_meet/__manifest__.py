@@ -16,5 +16,5 @@
         "data/jitsi_meet.xml",
         'security/ir.model.access.csv',
         ],
-    "installable": True,
+    "installable": False,
 }
