@@ -4,7 +4,7 @@
 {
     "name": "Customer invoice whatsapp integrations",
     "summary": "Integrate whatsapp with customer invoice",
-    "version": "15.0.1.0.0",
+    "version": "17.0.1.0.0",
     "category": "Social",
     "website": "https://github.com/juanpgarza/whatsapp-odoo",
     "author": "juanpgarza",
@@ -21,5 +21,5 @@
         'security/ir.model.access.csv',
         ],
     "development_status": "Production/Stable",
-    "installable": False,
+    "installable": True,
 }
