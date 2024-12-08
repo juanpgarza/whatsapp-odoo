@@ -26,21 +26,21 @@
                             groups="base_whatsapp.group_on_whatsapp_user"
                             class="btn btn-primary" 
                             string="Enviar Whatsapp"
-                            attrs="{'invisible' : ['|', ('state', '=', 'cancel'), ('send_whatsapp', '!=', 'without_sending')]}" 
+                            invisible="state == 'cancel' or send_whatsapp != 'without_sending'" 
                             type="object"/>
                     <button name="send_whatsapp_step" 
                             groups="base_whatsapp.group_on_whatsapp_user"
                             class="btn btn-success" 
                             string="Presupuesto enviado" 
                             icon="fa-whatsapp"
-                            attrs="{'invisible' : ['|', ('state', '=', 'cancel'), ('send_whatsapp', '!=', 'sent')]}"
+                            invisible="state == 'cancel' or send_whatsapp != 'sent'"
                             type="object"/>
                     <button name="send_whatsapp_step" 
                             groups="base_whatsapp.group_on_whatsapp_user"
                             class="btn" 
                             string="Presupuesto no enviado" 
                             icon="fa-whatsapp"
-                            attrs="{'invisible' : ['|', ('state', '=', 'cancel'), ('send_whatsapp', '!=', 'not_sent')]}"
+                            invisible="state == 'cancel' or send_whatsapp != 'not_sent'"
                             type="object"/>
                 </xpath>
 

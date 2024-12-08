@@ -4,7 +4,7 @@
 {
     "name": "Jitsi Meet",
     "summary": "",
-    "version": "15.0.1.0.0",
+    "version": "17.0.1.0.0",
     "category": "Social",
     "website": "https://github.com/juanpgarza/whatsapp-odoo",
     "author": "juanpgarza",
@@ -16,5 +16,5 @@
         "data/jitsi_meet.xml",
         'security/ir.model.access.csv',
         ],
-    "installable": False,
+    "installable": True,
 }

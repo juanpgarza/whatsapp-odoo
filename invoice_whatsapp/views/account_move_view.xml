@@ -11,21 +11,21 @@
                         groups="base_whatsapp.group_on_whatsapp_user"
                         class="btn btn-primary"
                         string="Enviar Whatsapp"
-                        attrs="{'invisible' : ['|', '|', ('state', 'in', ('draft','cancel')), ('move_type', 'not in', ('out_invoice', 'out_refund', 'in_invoice', 'in_refund')), ('send_whatsapp', '!=', 'without_sending')]}"
+                        invisible="state in ('draft', 'cancel') or move_type not in ('out_invoice', 'out_refund', 'in_invoice', 'in_refund') or send_whatsapp != 'without_sending'"
                         type="object"/>
                <button name="send_whatsapp_step"
                         groups="base_whatsapp.group_on_whatsapp_user"
                         class="btn btn-success"
                         string="Factura enviada"
                         icon="fa-whatsapp"
-                        attrs="{'invisible' : ['|', '|', ('state', 'in', ('draft','cancel')), ('move_type', 'not in', ('out_invoice', 'out_refund', 'in_invoice', 'in_refund')), ('send_whatsapp', '!=', 'sent')]}"
+                        invisible="state in ('draft', 'cancel') or move_type not in ('out_invoice', 'out_refund', 'in_invoice', 'in_refund') or send_whatsapp != 'sent'"
                         type="object"/>
                <button name="send_whatsapp_step"
                         groups="base_whatsapp.group_on_whatsapp_user"
                         class="btn"
                         string="Factura no enviada"
                         icon="fa-whatsapp"
-                        attrs="{'invisible' : ['|', '|', ('state', 'in', ('draft','cancel')), ('move_type', 'not in', ('out_invoice', 'out_refund', 'in_invoice', 'in_refund')), ('send_whatsapp', '!=', 'not_sent')]}"
+                        invisible="state in ('draft', 'cancel') or move_type not in ('out_invoice', 'out_refund', 'in_invoice', 'in_refund') or send_whatsapp != 'not_sent'"
                         type="object"/>
            </xpath>
             </field>
