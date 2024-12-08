@@ -33,10 +33,11 @@ class SendWhatsappPartner(models.TransientModel):
 
     jitsi_link = fields.Char(string="Link Jitsi", readonly=True)
 
-    @api.model
-    def create(self, vals):
-        vals['jitsi_link'] = self.env['jitsi.meet'].sudo().create({'name':'Jitsi Meet'}).jitsi_link
-        res = super(SendWhatsappPartner, self).create(vals)
+    @api.model_create_multi
+    def create(self, vals_list):
+        for vals in vals_list:
+            vals['jitsi_link'] = self.env['jitsi.meet'].sudo().create({'name':'Jitsi Meet'}).jitsi_link
+        res = super(SendWhatsappPartner, self).create(vals_list)
         return res
 
     @api.onchange('default_messege_id')

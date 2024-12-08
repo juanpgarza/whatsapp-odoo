@@ -12,21 +12,21 @@
                             groups="base_whatsapp.group_on_whatsapp_user"
                             class="btn btn-primary"
                             string="Enviar Whatsapp"
-                            attrs="{'invisible': [('send_whatsapp', '!=', 'without_sending')]}"
+                            invisible="send_whatsapp != 'without_sending'"
                             type="object"/>
                     <button name="send_whatsapp_step"
                             groups="base_whatsapp.group_on_whatsapp_user"
                             class="btn btn-success"
                             string="Whatapp enviado"
                             icon="fa-whatsapp"
-                            attrs="{'invisible': [('send_whatsapp', '!=', 'sent')]}"
+                            invisible="send_whatsapp != 'sent'"
                             type="object"/>
                     <button name="send_whatsapp_step"
                             groups="base_whatsapp.group_on_whatsapp_user"
                             class="btn"
                             string="Whatsapp no enviado"
                             icon="fa-whatsapp"
-                            attrs="{'invisible': [('send_whatsapp', '!=', 'not_sent')]}"
+                            invisible="send_whatsapp != 'not_sent'"
                             type="object"/>
                 </xpath>
 

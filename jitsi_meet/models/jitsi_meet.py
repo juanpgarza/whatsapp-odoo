@@ -16,10 +16,11 @@ class JitsiMeet(models.Model):
     jitsi_link = fields.Char(string="Link Jitsi", readonly=True)
     hash = fields.Char('Hash')
 
-    @api.model
-    def create(self, vals):
-        vals['hash'] = create_hash()
-        config_url =  self.env['ir.config_parameter'].sudo().get_param('jitsi_meet.jitsi_event_url',default='https://meet.jit.si/')
-        vals['jitsi_link'] = config_url + vals['hash']
-        res = super(JitsiMeet, self).create(vals)
+    @api.model_create_multi
+    def create(self, vals_list):
+        for vals in vals_list:
+            vals['hash'] = create_hash()
+            config_url =  self.env['ir.config_parameter'].sudo().get_param('jitsi_meet.jitsi_event_url',default='https://meet.jit.si/')
+            vals['jitsi_link'] = config_url + vals['hash']
+        res = super(JitsiMeet, self).create(vals_list)
         return res

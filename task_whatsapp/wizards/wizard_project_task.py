@@ -63,7 +63,7 @@ class SendWhatsappTask(models.TransientModel):
 
         IrParamSudo = self.env['ir.config_parameter'].sudo()
         web_base_url = IrParamSudo.get_param('web.base.url')
-        access_token = task_record.rating_get_access_token()
+        access_token = task_record._rating_get_access_token()
 
         incluid_name = str(message).format(
             name=partner_record.name,
