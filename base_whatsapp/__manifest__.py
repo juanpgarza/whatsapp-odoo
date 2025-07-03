@@ -4,7 +4,7 @@
 {
     "name": "Base Whatsapp",
     "summary": "",
-    "version": "17.0.1.0.0",
+    "version": "18.0.1.0.0",
     "category": "Social",
     "website": "https://github.com/juanpgarza/whatsapp-odoo",
     "author": "openNova",
@@ -17,5 +17,5 @@
         'security/ir.model.access.csv',
         'views/on_whatsapp_template_view.xml',
         ],
-    "installable": False,
+    "installable": True,
 }

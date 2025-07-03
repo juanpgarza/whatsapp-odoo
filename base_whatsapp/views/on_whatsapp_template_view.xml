@@ -6,12 +6,12 @@
         <field name="name">Plantilla de whatsapp</field>
         <field name="model">on.whatsapp.template</field>
         <field name="arch" type="xml">
-            <tree>
+            <list>
                 <field name="sequence" widget="handle"/>
                 <field name="name" />
                 <field name="template_message" />
                 <field name="category" />
-            </tree>
+            </list>
         </field>
     </record>
 
@@ -59,7 +59,7 @@
         <field name="name">Plantillas de whatsapp</field>
         <field name="res_model">on.whatsapp.template</field>
         <!-- <field name="context">{'group_by': 'project_id'}</field> -->
-        <field name="view_mode">tree,form</field>
+        <field name="view_mode">list,form</field>
     </record>
 
     <!-- Technical Menu -->
