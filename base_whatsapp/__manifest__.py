@@ -17,5 +17,5 @@
         'security/ir.model.access.csv',
         'views/on_whatsapp_template_view.xml',
         ],
-    "installable": True,
+    "installable": False,
 }
