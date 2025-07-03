@@ -57,8 +57,14 @@ class AccountMove(models.Model):
             }
 
         # subtype_id = self.env['ir.model.data'].xmlid_to_res_id('mail_mt_note')
-        self.with_context(ctx).message_post(attachment_ids=[], body=message, canned_response_ids=[],
-                                            message_type='notification', partner_ids=[], subtype_xmlid=None)
+        # self.with_context(ctx).message_post(attachment_ids=[], body=message, canned_response_ids=[],
+        #                                     message_type='notification', partner_ids=[], subtype_xmlid=None)
+
+        self.with_context(ctx).message_post(
+            attachment_ids=[],
+            body=message,
+            message_type='comment'
+        )
 
     @api.returns('mail.message', lambda value: value.id)
     def message_post(self, **kwargs):
