@@ -4,7 +4,7 @@
 {
     "name": "Partner whatsapp integrations",
     "summary": "Integrate whatsapp with partner",
-    "version": "17.0.1.0.0",
+    "version": "18.0.1.0.0",
     "category": "Customer Relationship Management",
     "website": "https://github.com/juanpgarza/whatsapp-odoo",
     "author": "juanpgarza",
@@ -22,5 +22,5 @@
         'security/ir.model.access.csv',
         ],
     "development_status": "Production/Stable",
-    "installable": False,
+    "installable": True,
 }
